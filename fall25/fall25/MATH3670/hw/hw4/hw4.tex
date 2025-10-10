@@ -1,0 +1,80 @@
+\documentclass[12pt]{article}
+\title{\textbf{MATH 3670 Homework 3}}
+\author{Saahas Swaroop}
+
+\usepackage{latexsym}
+\usepackage{hyperref}
+\usepackage{amsmath}
+
+\begin{document}
+  \maketitle
+  \pagebreak
+
+  Ch.5: 1,2,3,5,6,7,10(a),11,18,19(a,b),20(a,b)
+
+  \section*{1}
+  $$P(X \geq 2) = \sum_{k=2}^{n} \binom{n}{k} p^k (1-p)^{n-k} = \sum_{k=2}^{4} \binom{4}{k} .6^k .4^{4-k}$$
+  $$ \binom{4}{2} .6^2 .4^2 + \binom{4}{3} .6^3 .4^1 + \binom{4}{4} .6^4 .4^0 = 0.82$$
+  \section*{2}
+  $$P(X \geq 3) = \sum_{k=3}^{5} \binom{5}{k} .2^k (.8)^{5-k}$$
+  $$P(X \geq 3) = \binom{5}{3} .2^3 .8^2 + \binom{5}{4} .2^4 .8^1 +\binom{5}{5} .2^5 .8^0 = 0.058$$ 
+  \section*{3}
+  $$P(X = 7) = \binom{10}{7} .7^7 .3^3 = 0.534$$
+  \section*{5}
+  $$P(X\geq 1) = \sum_{k=1}^{2} \binom{2}{k} p^k(1-p)^{2-k} $$
+  $$P(X\geq 1) = \binom{2}{1} p(1-p) + \binom{2}{2} p^2 = 2p - p^2$$
+  $$P(X\geq 2) = \sum_{k=2}^{4} \binom{4}{k} p^k(1-p)^{4-k}$$
+  $$P(X\geq 2) = \binom{4}{2} p^2(1-p)^2 + \binom{4}{3} p^3(1-p) + \binom{4}{4} p^4 = 6p^2(1-p)^2 + 4p^3(1-p) + p^4 = 3p^4 + 2p^3 + 6p^2$$
+
+  $$ 2p - p^2 \leq 3p^4 + 2p^3 + 6p^2$$
+  $p \geq 0.27$
+  $$P(X\geq 1) = \binom{2}{1} p(1-p) + \binom{2}{2} p^2 = 2p - p^2$$
+
+  \section*{6}
+  $E(X) = np = 7$ \\
+  $Var(X) = np(1-p) = 2.1$ \\
+  $1-p = 0.3, p = 0.7, n=10$ \\
+  \subsection*{a}
+  $$P(X=4) = \binom{10}{4} .7^4.3^6 = 0.0368$$
+  \subsection*{b}
+  $$P(X>12) = 0$$
+
+  \section*{7}
+  \subsection*{a}
+  $$ P(X \leq i) = \sum_{k=0}^{i} \binom{n}{k} p^k(1-p)^{n-k} $$
+  $$ P(X \geq n-i) = \sum_{k = n-i}^{n} \binom{n}{n-i} (1-p)^{n-i}(p)^{i} $$
+
+  Both probabilities will be equal due to the nature of their summation. The former will begin with $\binom{n}{0}$ and sum up to $\binom{n}{i}$. The latter will begin with $\binom{n}{n-i}$ and sum up to ${n}{n}$. However, we will note that this is simply the former summation but in reverse, as $\binom{n}{0} = \binom{n}{n}$ and $\binom{n}{i} = \binom{n}{n-i}$. 
+
+  \subsection*{b}
+  $$ P(X = k) = \binom{n}{k}p^k(1-p)^{n-k} = \frac{n!}{k!(n-k)!} \cdot p^k \cdot (1-p)^{n-k} $$
+  $$ P(Y = n-k) = \binom{n}{n-k}(1-p)^{n-k}p^{n-(n-k)} = \frac{n!}{(n-k)!(k)!} \cdot p^k \cdot (1-p)^{n-k} $$
+
+  \section{10}
+  \subsection*{a}
+  $$P(X = 2) = \binom{10}{2} \cdot .1^2 \cdot .9^8 = 0.194$$
+  $$P(X = 2) = \frac{e^{-1}1^2}{2!} = 0.184$$
+
+  \section*{11}
+  \subsection*{a}
+  $$P(X \geq 1) = 1 - P(X = 0) = 1 - \frac{e^{-.5}.5^0}{0!} = 0.393$$
+  \subsection*{b}
+  $$P(X = 0) = e^{-0.5} \cdot \frac{0.5^1}{1!} = 0.303$$
+  \subsection*{c}
+  $$P(X \geq 2) = 1 - P(X = 0) - P(X = 1) = 1 - e^{-0.5} \cdot \frac{0.5^0}{0!} - e^{-0.5} \cdot \frac{0.5^1}{1!} = 0.09$$
+
+  \section*{18}
+
+  $$P(\text{kept}) = P(0) + P(1) = \frac{\binom{80}{10} + 20\binom{80}{9}}{\binom{100}{10}} = 0.0296$$
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

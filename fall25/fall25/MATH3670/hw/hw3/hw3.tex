@@ -1,0 +1,81 @@
+\documentclass[12pt]{article}
+\title{\textbf{MATH 3670 Homework 3}}
+\author{Saahas Swaroop}
+
+\usepackage{latexsym}
+\usepackage{hyperref}
+\usepackage{amsmath}
+
+\begin{document}
+  \maketitle
+  \pagebreak
+Ch.3:44,45,46,47,48,49,50
+
+  \section*{44}
+  If both parents have brown eyes, and you have blue eyes, their genes must be Bb (Brown and blue). $$ P(bb) = P(b) \cdot P(b) = \frac{1}{2} \cdot \frac{1}{2} = \frac{1}{4} $$
+
+  \section*{45}
+  \subsection*{a}
+  $P(A) = P \text{ and } P(B) = 1-P$ \\
+  $P(A)^3 = P^3 \text{ and } P(B)^3 = (1-P)^3$ \\
+  $P(\text{A wins 3-0} | \text{someone is winning 3-0}) = \frac{P(A)^3 \cap 1}{P(A)^3 + P(B)^3} = \frac{P^3}{P^3 + (1-P)^3}$ \\
+
+  \subsection*{b}
+  $P(\text{B wins 3-0} | \text{someone is 3-0}) = \frac{P(B)^3 \cap 1}{P(A)^3 + P(B)^3} = \frac{(1-P)^3}{P^3 + (1-P)^3}$ \\
+  $P(\text{A wins the series} | \text{A is up 3-0}) = 1 - P(\text{A goes 0-4}) = 1 - (1-P)^4$ \\
+  $P(\text{B wins the series} | \text{B is up 3-0}) = 1 - P(\text{B goes 0-4}) = 1 - P^4$ \\
+  $P(\text{team wins} | \text{team leads 3-0}) = P(\text{A wins the series} | \text{A is up 3-0}) \cdot P(\text{A is 3-0} | \text{someone is 3-0}) + P(\text{B wins the series} | \text{B is up 3-0}) \cdot P(\text{B is 3-0} | \text{someone is 3-0}) = (1 - (1-P)^4) \cdot \frac{P^3}{P^3 + (1-P)^3} + (1-P^4) \cdot \frac{(1-P)^3}{P^3 + (1-P)^3}$
+
+  \subsection*{c}
+  $P(\text{win series} | \text{win g1})$. Let us assume that team A wins the first game (since the probabilities are identical it doesn't matter which team we choose to win the first game). Since they need at least three wins to win the series, we can write the probability that they win as follows: $$1 - [P(A = 2) + P(A = 1) + P(A = 0)]$$ \\
+
+  $P(A=k) = \binom{n}{k} \cdot 0.5^{k} \cdot 0.5^{n-k} = \binom{n}{k} \cdot 0.5^{n}$ \\
+  $$1 - [\binom{6}{2} \cdot .5^6 + \binom{6}{1} \cdot .5^6 + \binom{6}{0} \cdot .5^6] = 1 - [15(.5^6) + 6(.5^6) + 1(.5^6)] = 1 - [\frac{22}{64}] = \frac{21}{32} $$
+
+  \section*{46}
+  \subsection*{a}
+  What is the probability that the highest card is chosen for the first position? \\
+  $P(1 = H) = \frac{1}{3}$
+  \subsection*{b}
+  There are two ways for you to end up with the highest number. If the highest number is in position 2, or you reject the second card and the highest is in position 3. If we lock position 2, there are $2! = 2$ ways to order 1 and 3. If we lock position 3 and stipulate that the second card is lower than the first, there is only 1 way to order this. Since these are exclusive, there are 3 total ways to end up picking the highest card, and $3! = 6$ ways to order the cards, resulting in a probability of $\frac{3}{6} = \frac{1}{2}$ of ending up with the highest card.
+
+  \section*{47}
+  \subsection*{a}
+    $P(A \cup B) = P(A) + P(B) = .2 + .3 = 0.5$
+  \subsection*{b}
+    $P(A \cup B) = P(A) + P(B) - P(A \cap B) = .2 + .3 - (.2 * .3) = 0.44$
+  \subsection*{a}
+    $P(A \cap B \cap C) = P(A) \cdot P(B) \cdot P(C) = .2 \cdot .3 \cdot .4 = .024$
+  \subsection*{b}
+    $P(A \cap B \cap C) = 0$
+
+
+  \section*{48}
+  $$P(\text{woman has breast cancer(B)} | \text{has a positive mammography (M)}) = \frac{P(M | B) * P(B)}{P(M)}$$
+  $$P(M) = P(B) \cdot P(M | B) + P(B^c) \cdot P(M | B^c) = .02 \cdot .9 + .98 \cdot .1 = 0.116$$
+  $$P(B | M) = \frac{.9 \cdot .02}{.116} = 0.155$$
+
+  \section*{49}
+  $$ P(\text{is in California (C)} | \text{makes more than 250k (250)}) = \frac{P(250 | C) \cdot P(C)}{P(250)} = \frac{.063 * .12}{.033} = 0.229 $$
+
+  \section*{50}
+
+  $P(A) = 0.6$ \\
+  $P(A) = 0.4 * 0.1 = 0.04$ \\
+  $P(A \cup B) = P(A) + P(B) - P(A \cap B) = 0.6 + 0.04 - 0 = 0.64$
+
+  \section*{1}
+
+  For each value of $i$, we will place a woman in location $i$ and then place men in all places $i-1, i-2, ... 1$. The number of possibilities of this occuring can be found by arrainging that remaining 4 women around the remaining $10-i$ locations which can be represented as the equation $\binom{10-i}{4}$ . We must then divide this by the total number of possibilities, $\binom{10}{5} = 252$. This gives us the formula as $\frac{\binom{10-i}{4}}{252}.
+
+
+
+  \section*{2}
+
+  Let $h$ be the numbers of heads in $n$ flips. This means that $t$, the number of tails will be $n-h$. Thus, the difference between the number of heads and the number of tails must be $2h - n$. The smallest value of this expression is $-n$ and the largest is $n$ (as $h \leq n$). All possible values will be in this range, but only in increments of two. 
+
+
+
+    
+
+\end{document}

@@ -1,0 +1,49 @@
+\documentclass[12pt]{article}
+\title{\textbf{MATH 3670 Homework 2}}
+\author{Saahas Swaroop}
+
+\usepackage{latexsym}
+\usepackage{hyperref}
+\usepackage{amsmath}
+
+\begin{document}
+  \maketitle
+  \pagebreak
+
+  \section*{24}
+  $P(G | G) = \frac{P(GG)}(P(G)) = \frac{.25}{.5} = .5$
+  \section*{25}
+  $P(F) = .52, P(C) = .05, P(FC) = .02$. 
+  \subsection*{a}
+  $$P(F | C) = \frac{P(FC)}{P(C)} = .4$$
+  \subsection*{b}
+  $$P(C | F) = \frac{P(FC)}{P(F)} = \frac{1}{26}$$ 
+  \section*{27}
+  $$ P(D) = \frac{.05 + .01}{2} = .03 $$
+  $$ P( D | D ) = \frac{P(DD)}{P(D)} = \frac{.03 \cdot .03}{.03} = .03$$ 
+
+
+  \section*{29}
+  \subsection*{a}
+  $$ P(A) = P(A | W)P(W) + P(A | W^c)P(W^c) $$
+  $$ P(A) = .85 /cdot .9 + .2 /cdot .1 = .785 $$
+  \subsection*{b}
+  $$ P(W^c | A^c) = \frac{P(A^c | W^c)P(W^c)}{P(A^c)} $$
+  $$ P(W^c | A^c) = \frac{.8 \cdot .1}{.215} = .372 $$
+  \section*{31}
+  $$ P(D | V_R) = \frac{P(V_R | D)P(D)}{P(V_R)} = \frac{.125 \cdot .4}{.59} = 0.085 $$
+  \section*{35}
+  $$ P(A) = P(A | G)P(G) + P(A | Avg)P(Avg) + P(A | B)P(B)  = .05 * .2 + .15 * .5 + .3 * .3 = 0.175$$
+  $$ P( G | A^c) = \frac{P(A^c | G)P(G)}{P(A^c)} = 0.2303 $$
+  $$ P( A | A^c) = \frac{P(A^c | A)P(A)}{P(A^c)} = 0.5152 $$
+  \section*{39}
+  \subsection*{a}
+  $$ P(H)^3 + P(T)^3 = .25 $$
+  \subsection*{b}
+  $$ P(A \cup B) = P(A) + P(B) - P(A \cap B) = .25 + .25 - .0625 = 0.4375 $$
+
+  \section*{41}
+  $$ P(S) = .5^n $$
+  $$ P(C | S) = \frac{P(S | C)P(C)}{P(S)} = \frac{1 \cdot .5}{.5^n} = .5^{1-n}$$
+
+\end{document}
